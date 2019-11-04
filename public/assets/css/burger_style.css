@@ -1,0 +1,28 @@
+#title {
+    text-align: center;
+}
+
+#burgerpic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.lead {
+    text-align: center;
+}
+
+#add-burger {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.btn-info {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
