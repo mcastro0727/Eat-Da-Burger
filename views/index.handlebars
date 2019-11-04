@@ -1,0 +1,46 @@
+<h1>Burgers!</h1>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col">
+            <div class="panel-panel default">
+                <h1>Ready to Eat Burger</h1>
+                <ul class="list-group">
+                    {{#each burgers}}
+                    {{#unless this.devoured}}
+                    {{> burger-block devoured=false}}
+                    {{/unless}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+
+        <div class="col">
+            <h1>Devoured Burgers</h1>
+            <div class="panel panel-default">
+                <ul class="list-group">
+                    {{#each burgers}}
+                    {{#if this.devoured}}
+                    {{> burger-block devoured=true}}
+                    {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-6"
+            <p class="lead">Add a Burger to Eat!</p>
+            <form class="create-update-form" action="/api/burgers" method="POST">
+                <div class="form-group">
+                    <textarea class="form-control input-lg" type="text" name="burger_name" row="3"></textarea>
+                </div>
+                <button class="btn btn-info" type="submit">Yum!</button>
+            </form>
+    </div>
+</div>
